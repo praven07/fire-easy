@@ -28,5 +28,5 @@ export interface PaginationInterface<T> {
 
 export interface StreamInterface<T> {
 
-  stream(): Observable<T[]>;
+  stream(): Observable<T>;
 }
