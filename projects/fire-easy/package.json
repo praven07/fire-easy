@@ -1,6 +1,15 @@
 {
   "name": "fire-easy",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "author": {
+    "name": "Praven",
+    "url": "https://twitter.com/pravenmoorthy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/praven07/fire-easy"
+  },
+  "keywords": ["angular fire", "firebase", "firestore"],
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0",
