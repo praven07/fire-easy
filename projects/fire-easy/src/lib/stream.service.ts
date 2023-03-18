@@ -3,7 +3,7 @@ import {StreamInterface} from "./interface";
 import {map, Observable} from "rxjs";
 import {CollectionService} from "./collection.service";
 
-export abstract class CollectionStreamService<T extends FireEasyModel> extends CollectionService<T> implements StreamInterface<T> {
+export abstract class CollectionStreamService<T extends FireEasyModel> extends CollectionService<T> implements StreamInterface<T[]> {
 
   /**
    * This is just a base stream method. It streams all the entire collection.
