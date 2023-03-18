@@ -6,9 +6,9 @@ export interface FireEasyModel {
   id?: string;
 
   /**
-   * Return the models state into a json format.
+   * Return the models state in an object format.
    */
-  toJson(): JSON;
+  toJson(): Object;
 }
 
 
