@@ -1,4 +1,5 @@
 import {QueryFn} from "@angular/fire/compat/firestore";
+import {Observable} from "rxjs";
 
 export interface CollectionInterface<T> {
 
@@ -22,4 +23,10 @@ export interface PaginationInterface<T> {
   getFirst(): Promise<T[]>;
   getNext(data: T): Promise<T[]>;
   getPrevious(data: T): Promise<T[]>;
+}
+
+
+export interface StreamInterface<T> {
+
+  stream(): Observable<T[]>;
 }

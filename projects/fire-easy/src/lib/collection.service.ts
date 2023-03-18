@@ -84,7 +84,7 @@ export abstract class CollectionService<T extends FireEasyModel> extends BaseSer
     return this.query(ref => ref.where(key, 'array-contains', searchValue));
   }
 
-  private snapshotToModel(snapshot: QuerySnapshot<any>): T[] {
+  protected snapshotToModel(snapshot: QuerySnapshot<any>): T[] {
 
     return snapshot.docs.map(doc => this.fromDocument(doc as DocumentSnapshot<any>));
   }
