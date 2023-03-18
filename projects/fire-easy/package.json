@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/praven07/fire-easy"
   },
-  "keywords": ["angular fire", "firebase", "firestore"],
+  "keywords": ["angular","angular fire", "firebase", "firestore"],
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0",
