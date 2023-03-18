@@ -1,4 +1,4 @@
-import {DocumentSnapshot, QueryFn} from "@angular/fire/compat/firestore";
+import {QueryFn} from "@angular/fire/compat/firestore";
 
 export interface CollectionInterface<T> {
 
