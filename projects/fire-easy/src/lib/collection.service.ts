@@ -69,6 +69,21 @@ export abstract class CollectionService<T extends FireEasyModel> extends BaseSer
     return this.snapshotToModel(snapshot as QuerySnapshot<any>);
   }
 
+
+  /**
+   * This search method by default only searches in the tags array field in the document but a custom key can be
+   * provided. Firestore does not have a native search feature so this is just a workaround.
+   *
+   * ex: tags: ["Peter", "Sam", "Samuel"]
+   * search("Sa", "tags") return ["Sam", "Samuel"]
+   * @param searchValue
+   * @param key
+   */
+  public async search(searchValue: string, key: string = "tags"): Promise<T[]> {
+
+    return this.query(ref => ref.where(key, 'array-contains', searchValue));
+  }
+
   private snapshotToModel(snapshot: QuerySnapshot<any>): T[] {
 
     return snapshot.docs.map(doc => this.fromDocument(doc as DocumentSnapshot<any>));
