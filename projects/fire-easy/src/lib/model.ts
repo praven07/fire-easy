@@ -10,3 +10,12 @@ export interface FireEasyModel {
    */
   toJson(): JSON;
 }
+
+
+export interface PaginationOptions {
+  pageSize: number;
+
+  orderBy: string;
+
+  isAsc: boolean;
+}
