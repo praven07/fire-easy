@@ -67,3 +67,68 @@ export class ClientsService extends CollectionService<Client> {
 ### 3. Using in the component
 
 All you have to do now is use it in you componet just like any other service.
+
+
+
+## Pagination Feature Usage
+
+**class:** `PaginationService`
+
+This library makes pagination through the collection very simple. All you have to do is extend your service to `PaginationService`.
+
+```ts
+import {PaginationService} from "fire-easy";
+
+export class ClientsService extends PaginationService<Client> {}
+
+```
+
+`PaginationService` extends `CollectionService` so you get all the functionality of `CollectionService` plus the pagination feature.
+
+**PaginationOptions**
+This is a configuration interface for the `PaginationService`.
+```ts
+export interface PaginationOptions {
+  pageSize: number;
+
+  orderBy: string;
+
+  isAsc: boolean;
+}
+```
+
+**Methods**
+
+
+| Method            | Description                                |
+|-------------------|--------------------------------------------|
+| `getFirst()`      | This returns the first set of documents    |
+| `getNext()`       | This returns the next set of documents     |
+| `getPrevious()`   | This returns the previous set of documents |
+
+
+## Stream Feature Usage
+
+**class:** `CollectionStreamService`
+
+```ts
+import {StreamService} from "fire-easy";
+
+export class ClientsService extends StreamService<Client> {}
+
+```
+The `CollectionStreamService` extends `CollectionService`. This class has only one method `stream()` which make a realtime connection to the firestore collection.
+
+
+## Document Feature Usage
+
+**class:** `DocumentService`
+
+```ts
+import {DocumentService} from "fire-easy";
+
+export class ClientService extends DocumentService<Client> {}
+
+```
+`DocumentService` is similar to `CollectionService` the only difference is `CollectionService` is for firestore collection and `DocumentService` is for a single firestore document.
+
